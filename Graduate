@@ -1,0 +1,36 @@
+package proje;
+public class Graduate extends Ogrenci{
+ public String advisor;
+ public String subject;
+ public Graduate(String studentID, String name, String surname,String subject,String advisor) {
+ super(studentID, name, surname);
+ this.subject = subject;
+ this.advisor=advisor;
+ }
+ public Graduate() {
+ super();
+ subject ="---";
+ advisor ="---";
+ }
+ public Graduate(Graduate c) {
+ super(c);
+ subject=c.subject;
+ advisor=c.advisor;
+ }
+
+ public String getAdvisor() {
+ return advisor;
+ }
+ public void setAdvisor(String advisor) {
+ this.advisor = advisor;
+ }
+ public String getSubject() {
+ return subject;
+ }
+ public void setSubject(String subject) {
+ this.subject = subject;
+ }
+ @Override
+ public String toString() {
+ return super.toString()+subject+advisor;
+ } }
